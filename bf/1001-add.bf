@@ -1,12 +1,45 @@
-,		; read input and store in s1
->		; move pointer to s2 
-,		; read input and store in s2
-[		 ; enter loop
-<		 ; move to s1
-+		 ; increment s1
->		 ; move to s2
--		 ; decrement s2
-]		 ; exit loop
-<		 ; go back to s1
-------------------------------------------------	;subtract 48(ASCCI 0)
-.							;print s1
+#Make the first cell (Cell 0) hold a value of 48 
+>++++ ++++
+[
+<++++ ++
+>-
+]
+#Get inputs and minus 48 from each to get Decimal 
+,>,
+<<
+[
+>-
+>-
+<<-
+]
+#Adds the contents of Cells 1 and 2
+>
+[
+>+
+<-
+]
+#Moves answer to Cell 0
+>
+[
+<+
+>-
+]
+<
+[
+<+
+>-
+ ]
+#Converts answer to ASCII
+>++++ ++++
+[
+<++++ ++
+>-
+]
+<
+[
+<+
+>-
+]
+<
+#Print answer
+.
